@@ -3,6 +3,7 @@ const prompt = require ("prompt-sync")()
 const criarBaralho = require ('./baralhos/criarBaralho')
 const listarBaralhos = require ('./baralhos/listarBaralho')
 const atualizarBaralho = require ('./baralhos/atualizarBaralho')
+const deletarBaralho = require ('./baralhos/deletarBaralho')
 
 
 
@@ -52,6 +53,10 @@ var escolha = prompt('Qual item deseja realizar: ')
             menu()
             break
         case '4':
+            listarBaralhos()
+            id = parseInt(prompt('Número de Usuario que deseja remover: '))
+            deletarBaralho(id);
+            menu();
 
             break
         case '5':
