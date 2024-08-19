@@ -10,6 +10,7 @@ const listarFlashcards = require('./flashcard/criarFlashcards')
 const atualizarFlashcard = require('./flashcard/atualizarFlashcards')
 const deletarFlashcard = require('./flashcard/deletarFlashcardsPorBaralho')
 const buscarFlashcardPorPergunta = require('./flashcard/buscarFlashcardsPorPergunta')
+const buscarFlashcardPorBaralho = require('./flashcard/buscarFlashcardsPorBaralho')
 
 
 
