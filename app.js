@@ -5,7 +5,7 @@ const listarBaralhos = require ('./baralhos/listarBaralho')
 const atualizarBaralho = require ('./baralhos/atualizarBaralho')
 const deletarBaralho = require ('./baralhos/deletarBaralho')
 
-const criarFlashcards = require('./flashcard/criarFlashcards')
+const criarFlashcard = require('./flashcard/criarFlashcards')
 
 
 
