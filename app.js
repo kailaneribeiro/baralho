@@ -62,10 +62,16 @@ var escolha = prompt('Qual item deseja realizar: ')
             id = parseInt(prompt('Número de Usuario que deseja remover: '))
             deletarBaralho(id);
             menu();
-
             break
         case '5':
-
+            let pergunta = prompt("Qual a pergunta do flashcard: ")
+            let resposta = prompt("Qual a resposta dessa pergunta: ")
+            listarBaralhos()
+            idBaralho = parseInt(prompt("Informe o ID do baralho para adicionar: "))
+            criarFlashcard({ pergunta, resposta, idBaralho })
+            console.log("Flashcard adicionado com sucesso!")
+            exibirMenu()
+            break  
             break
         case '6':
 
