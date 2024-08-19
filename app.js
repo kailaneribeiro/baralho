@@ -5,7 +5,13 @@ const listarBaralhos = require ('./baralhos/listarBaralho')
 const atualizarBaralho = require ('./baralhos/atualizarBaralho')
 const deletarBaralho = require ('./baralhos/deletarBaralho')
 
-
+const criarFlashcard = require('./flashcard/criarFlashcard')
+const listarFlashcards = require('./flashcard/listarFlashcards')
+const listarFlashcardsPorBaralhoId = require('./flashcard/listarFlashcardsPorBaralhoId')
+const atualizarFlashcard = require('./flashcard/atualizarFlashcard')
+const deletarFlashcard = require('./flashcard/deletarFlashcard')
+const buscarFlashcardsPorPergunta = require('./flashcard/buscarFlashcardsPorPergunta')
+const buscarFlashcardsPorBaralho = require('./flashcard/buscarFlashcardsPorBaralho')
 
 
 
