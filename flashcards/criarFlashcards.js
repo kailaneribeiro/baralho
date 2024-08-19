@@ -1,4 +1,4 @@
-const { flashcards } = require('../dados.js')
+const { flashcards } = require('../data.js')
 
 function criarFlashcard(flashcard) {
     flashcard.id = flashcards.length + 1
