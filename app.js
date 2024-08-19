@@ -86,24 +86,24 @@ var escolha = prompt('Qual item deseja realizar: ')
         case '8':
             listarFlashcards()
             id = parseInt(prompt("Escolha um flashcard par atualizar: "))
-            let novaPerg = prompt("Informe a nova pergunta: ")
-            let novaResp = prompt("Informe a nova resposta: ")
-            let novoBaral = prompt("Informe o novo ID do baralho: ")
-            atualizarFlashcard(id, { pergunta: novaPerg, resposta: novaResp, idBaralho: novoBaral })
-            console.log("Flashcard atualizado com sucesso!")
+            let novaPergunta = prompt("Qual é a nova pergunta: ")
+            let novaResposta = prompt("Qual é a nova resposta: ")
+            let novoBaralho = prompt("Qual o novo ID do baralho: ")
+            atualizarFlashcard(id, { pergunta: novaPergunta, resposta: novaResposta, idBaralho: novoBaralho })
+            console.log("Flashcard atualizado!")
             menu()
             break
         case '9':
             listarFlashcards()
             id = parseInt(prompt("Escolha um flashcard para deletar: "))
             deletarFlashcard(id)
-            console.log("Flashcard removido com sucesso!")
+            console.log("Flashcard deletad com sucesso!")
             menu()
             break
         case '10':
             let buscarPergunta = prompt("Informe a pergunta do flashcard: ")
-            let resultado = buscarFlashcardsPorPergunta(buscarPergunta)
-            console.log(resultado)
+            let resul = buscarFlashcardsPorPergunta(buscarPergunta)
+            console.log(resul)
             menu()
             break
         case '11':
