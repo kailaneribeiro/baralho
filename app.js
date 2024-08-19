@@ -15,11 +15,6 @@ const buscarFlashcardPorBaralho = require('./flashcard/buscarFlashcardsPorBaralh
 
 
 
-
-
-
-
-
 function menu (){
     console.log(`
     1. Criar Baralho
