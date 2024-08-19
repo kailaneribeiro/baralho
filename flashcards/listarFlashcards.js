@@ -4,9 +4,9 @@ function listarFlashcards() {
     if(flashcards !== 0){
         flashcards.forEach(flashcard => {
             console.log(`
-            ID: ${flashcard.id}
-            Pergunta: ${flashcard.pergunta}
-            Resposta: ${flashcard.resposta}
+            id: ${flashcard.id}
+            pergunta: ${flashcard.pergunta}
+            resposta: ${flashcard.resposta}
             ID do -Baralho: ${flashcard.idBaralho}
             `);
         })
