@@ -8,6 +8,7 @@ const deletarBaralho = require ('./baralhos/deletarBaralho')
 const criarFlashcard = require('./flashcard/criarFlashcards')
 const listarFlashcards = require('./flashcard/criarFlashcards')
 const atualizarFlashcard = require('./flashcard/atualizarFlashcards')
+const deletarFlashcard = require('./flashcard/deletarFlashcardsPorBaralho')
 
 
 
