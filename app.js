@@ -5,12 +5,13 @@ const listarBaralhos = require ('./baralhos/listarBaralho')
 const atualizarBaralho = require ('./baralhos/atualizarBaralho')
 const deletarBaralho = require ('./baralhos/deletarBaralho')
 
-const criarFlashcard = require('./flashcard/criarFlashcards')
-const listarFlashcards = require('./flashcard/criarFlashcards')
-const atualizarFlashcard = require('./flashcard/atualizarFlashcards')
-const deletarFlashcard = require('./flashcard/deletarFlashcardsPorBaralho')
-const buscarFlashcardPorPergunta = require('./flashcard/buscarFlashcardsPorPergunta')
-const buscarFlashcardPorBaralho = require('./flashcard/buscarFlashcardsPorBaralho')
+const criarFlashcard = require('./flashcards/criarFlashcards')
+const listarFlashcards = require('./flashcards/listarFlashcards')
+const listarFlashcardsPorBaralho = require('./flashcards/buscarFashcardsPorBaralho')
+const atualizarFlashcard = require('./flashcards/atualizarFlashcards')
+const deletarFlashcard = require('./flashcards/deletarFlashcardsPorBaralho')
+const buscarFlashcardsPorPergunta = require('./flashcards/buscarFlashcardsPorPergunta')
+const buscarFlashcardsPorBaralho = require('./flashcards/buscarFashcardsPorBaralho')
 
 function menu (){
     console.log(`
@@ -42,8 +43,8 @@ var escolha = prompt('Qual item deseja realizar: ')
         case '3':
             listarBaralhos();
             var id = parseInt(prompt('qual elemento deseja atualizar: '))
-            var novoBaralho = prompt('Novo nome: ');
-            atualizarBaralho(id,{ nome: novoBaralho})
+            var novo= prompt('Novo nome: ');
+            atualizarBaralho(id,{ nome: novo})
             console.log(' Baralho atualizado com sucesso!')
             menu()
             break
@@ -60,9 +61,8 @@ var escolha = prompt('Qual item deseja realizar: ')
             idBaralho = parseInt(prompt("Informe o ID do baralho para adicionar: "))
             criarFlashcard({ pergunta, resposta, idBaralho })
             console.log("Flashcard adicionado com sucesso!")
-            exibirMenu()
+            menu()
             break  
-            break
         case '6':
             listarFlashcards()
             menu()
@@ -70,7 +70,7 @@ var escolha = prompt('Qual item deseja realizar: ')
         case '7':
             listarBaralhos()
             idBaralho = parseInt(prompt("Escolha um baralho para listar os flashcards: "))
-            listarFlashcardsPorBaralhoId(idBaralho)
+            listarFlashcardsPorBaralho(idBaralho)
             menu()
             break
         case '8':
@@ -103,7 +103,7 @@ var escolha = prompt('Qual item deseja realizar: ')
             console.log(flashcardsEncontrados)
             menu()
             break
-        case '12':
+        case '0':
             console.log("Até mais 👋! :)")
             break
         default:
