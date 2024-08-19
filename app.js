@@ -12,9 +12,6 @@ const deletarFlashcard = require('./flashcard/deletarFlashcardsPorBaralho')
 const buscarFlashcardPorPergunta = require('./flashcard/buscarFlashcardsPorPergunta')
 const buscarFlashcardPorBaralho = require('./flashcard/buscarFlashcardsPorBaralho')
 
-
-
-
 function menu (){
     console.log(`
     1. Criar Baralho
@@ -30,8 +27,6 @@ function menu (){
     11. Buscar Flashcards por Baralho
     0. Sair
     `)
-
-
 var escolha = prompt('Qual item deseja realizar: ')
     switch(escolha){
         case '1':
@@ -115,5 +110,4 @@ var escolha = prompt('Qual item deseja realizar: ')
             console.log("Opção inválida!")
     }
 }
-
 menu()
